@@ -1,0 +1,131 @@
+<!-- pdfapp/templates/upload_pdf.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" type="text/css" href="static/pdfapp/a.css">
+
+    <title>Upload PDF</title>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        $(document).on('click', '.pdf-preview', function() {
+            var pdfUrl = $(this).find("embed").attr("src");
+            window.open(pdfUrl, '_blank');
+        });
+    
+        $(document).ready(function() {
+            // Function to handle PDF search
+            function searchPDFs() {
+                var searchTerm = $('.search-input').val().toLowerCase();
+    
+                // Loop through each PDF preview
+                $('.pdf-preview').each(function() {
+                    var pdfName = $(this).find("p").text().toLowerCase();
+                    var isMatch = pdfName.includes(searchTerm);
+    
+                    // Show/hide based on search result
+                    $(this).toggle(isMatch);
+                });
+            }
+    
+            // Attach event handler to search input
+            $('.search-input').on('input', searchPDFs);
+    
+            // Submit the form using AJAX
+            $('.upload-form form').submit(function(event) {
+                event.preventDefault();  // Prevent the default form submission
+                var formData = new FormData($(this)[0]);
+    
+                $.ajax({
+                    url: $(this).attr('action'),
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        // Handle success, e.g., display a success message
+                        console.log(response);
+                        $('#uploadMessage').text(response.message);
+                        location.reload(true);
+                    },
+                    error: function(error) {
+                        // Handle error, e.g., display an error message
+                        console.log(error);
+                        
+                    }
+                });
+    
+                // Close the upload form
+                $('.upload-form').slideUp();
+            });
+    
+            // Show/hide the upload form
+            $('.show-upload-form').click(function() {
+                $('.upload-form').slideDown();
+            });
+    
+            // Close upload form if clicked outside the form
+            $(document).click(function (event) {
+                if (!$(event.target).closest('.upload-form, .show-upload-form').length) {
+                    // Clicked outside the form, close it
+                    $('.upload-form').slideUp();
+                }
+            });
+    
+            // Prevent form from closing when clicking inside the form
+            $('.upload-form').click(function (event) {
+                event.stopPropagation();
+            });
+    
+            // Close upload form if no PDF selected
+            $('.close-upload-form').click(function() {
+                $('.upload-form').slideUp();
+            });
+        });
+    </script>
+    
+    
+</head>
+<body>
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <p class="web_name" font-size="12px">ReaDocX</p>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search PDFs...">
+            
+        </div>
+        <button class="show-upload-form">Upload</button>
+    </div>
+    
+
+<!-- Modify your upload form to include a class for easy reference -->
+<div class="upload-form" style="display: none;">
+    <button class="close-upload-form">X</button>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+</div>
+
+<div id="uploadMessage"></div>
+    <!-- PDF previews -->
+   
+    <div class="pdf-list">
+        {% for pdf in pdfs %}
+            <div class="pdf-preview">
+                <div class="pdf-overlay"></div>
+                <a href="{{ pdf.file.url }}" target="_blank">
+                    <embed src="{{ pdf.file.url }}" type="application/pdf" />
+                    <p>{{ pdf.user_provided_name }}</p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

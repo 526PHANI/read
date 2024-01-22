@@ -1,0 +1,14 @@
+{ "client_secret":"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",
+  "type": "service_account",
+  "project_id": "read-documents-410704",
+  "private_key_id": "7f8cac616d97acc3aaaa5b25d7dea9a4ff5b07bb",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDBt41c4UlbjtGW\n+scLRCE98oFpm54xeAi2AJDELkhG4ofx9I8Tmgjv67wBF2QP8kNdvSWe3cmP8jXE\n3tPmaAK7UR2iiWk0kIzcntFs6IQlqolrkrnhJBARDOGG10++rXZ7SB7BgiON7HpH\nP2J89reS3yrl/6uhmO6mB50MdNXOocg8RJAhPVszWlKcc8m/TZIVRVDEHPHBHbau\nEqmApsaoftMTnW/3t/DiZ28FX5oWvCKXWdk34t3cWVQIdF2pFriy//qmXKBMirkX\nn/+qeN8DumgLrKNY1iwq27uN28V7nUAUdm2Q4n9cVUwdqq/E3MXjbZGc4EN/KQ4p\n1Gqx33X7AgMBAAECggEAInQK6GIJMgeMr1Wa4R4U63eeHLJYyGOY6QXguYOhxzmz\nBA2DBPF4dXNv1KHcYhmscZeagU7g8oEZnxIijfAhzD75DldyJq8u3m5AwSX5mtlh\n54gJF0nasa2gzuKshDVFxVdmYPRMbomIlfNoCOG4dJ7Memumku8oQs9H11dQT5eX\nE6TBIbHJBGVh2IpwrmbYfu+KhLv9GXyT5Et0Hv5FRsOlm55xMGb09xLRoeanLlx2\nJ2xsE+LBvY0QoT0hPxYx6xDAkzVj3MCR6zfR2yAqlvX4nqB3gHxXiAbZIjtz1z7L\n4LnpWnbgU+y+4p3lyZpHEp78gQ/m4oel7ZU/6p6bwQKBgQDxhvVXxRfArO5OCeD3\nAZGtoZJ8rOsXJeXAMjNKKjxtgJPvzNHwNk0LnxVZ6PZAq+q632qIt/rM8rq+BgKS\nMNiRYF2Ph80i0GQtcONmxTGq1KBKfrXUtrJQtDAsH6uJGLbCmoiEpBeypI2kxbZh\ntASGvo9mxBfIBj7JIz06L7s0fwKBgQDNUy7JLHeY+9O4ttma2VRtX6rjz11jW+2y\npKZvctOtNRM0HcRdhMvxFA+mql+pbYybHUJYZkeGc5Ktl1CIQiNssq+EKHHREqGR\nMM0teeD+nRSAi+LRbHdQ6cqiYfbSurG14zlqrHrLEzXCEIN+kik7K8NNz4y+iaOg\nc87xQgrQhQKBgHq8soDfz6pCNvfBXWkoivdJXD+vP+iLga2h1R6jSAH9jTAXTbhc\nX9rABQGjuUA0HRzJ3EGN/Q2Za/yU4UmZOPTnm6QMxtoiPEY7T9Qx8YN2ed5hddWa\n4hLQ/ontriYFQRqznRyKpuBJbxGEx6Hu8T3oKMd4bv1e7xkXp02iY+fRAoGBAL8R\n6JjnG4iu2DCtX8S899csTr/eib5bntA+bm+KALfPi0ZVaRXJ7WszyvjC1XC6dD0o\ntkPDMk5JILcP965FNegCRFkMthXka5vMOTNXluv5y0lwY6uVb1dJqPsBhQpHF/b2\nM8k0JrTx9HXanjNb2qioqf+v4/6v4SgAfRR/68ZtAoGAPXEDmlkPDhLExTIAhAt4\n2YVw4UDfwk8MwZGATwPbgk2hCP717lBXM4xg0b8WI6cb3FOaOOd5eeXtrGTL1IcS\nd3Vk9RxfNcrF1LErsecr8F1/2CrJnuk10S5eGr1RFJGEcwLl88e/ErJrXZRcnLEI\n2afVJBQmKmKbsg6aCb3NYBA=\n-----END PRIVATE KEY-----\n",
+  "client_email": "readocx@read-documents-410704.iam.gserviceaccount.com",
+  "client_id": "101111432480339657186",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/readocx%40read-documents-410704.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
