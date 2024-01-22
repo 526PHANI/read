@@ -7,7 +7,7 @@ from django.shortcuts import render, redirect
 from django.core.files.base import ContentFile
 import win32com.client
 from django.http import JsonResponse
-from google_drive_utils import upload_to_google_drive
+
 from .models import PDFDocument
 from .forms import UploadPDFForm
 from .utils import convert_to_pdf
